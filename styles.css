@@ -1,0 +1,13 @@
+/* ---------- RESET STYLES ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- GLOBAL STYLES ---------- */
+
+body {
+    width: 100%;
+    background-color: aqua;
+}
