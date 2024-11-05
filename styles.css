@@ -20,6 +20,7 @@ ul {
 
 body {
     width: 100%;
+    background-color: #000;
 }
 
 /* ---------- HEADER STYLES ---------- */
@@ -32,7 +33,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #000;
 }
 
 .header__logo {
@@ -75,54 +75,37 @@ body {
 .header__navbar--link:hover::before, .header__navbar--link:focus::before {
     width: 100%;
 }
+/* ---------- MAIN STYLES ---------- */
 
-
-/* ---------- MEDIA QUERIES ---------- */
-
-@media (max-width: 1180px) {
-    .header {
-        width: 100%;
-    }
-}
-/* 
-.greeting__slider {
-    width: 100%;
-    display: flex;
-    overflow: hidden;
-}
-
-.greeting__scene {
-    position: absolute;
-    top: 0;
+.main {
     height: 100%;
+    margin-top: -110px;
+}
+
+/* ------ PRESENTATION STYLES ---------- */
+
+.presentation {
+    height: 720px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    z-index: -1;
+}
+
+.presentation__scene {
     width: 100%;
     padding: 0 30px;
     text-align: center;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('img/back.png');
     background-size: cover;
-    background-position: 50% 85%;
-    z-index: -1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: ;
 
     transition: all 1s;
 }
 
-.greeting__scene:nth-of-type(2) {
-    right: -100%;
-}
-
-.greeting__scene:nth-of-type(3) {
-    right: -100%;
-}
-
-.greeting__scene--hidden-left {
-    left: -100%;
-}
-
-.greeting__slogan {
+.presentation__scene-slogan {
     color: #fff;
     text-transform: uppercase;
     font-size: 72px;
@@ -132,7 +115,7 @@ body {
     margin-bottom: 20px;
 }
 
-.greeting__formula {
+.presentation__scene-formula{
     color: #fff;
     font-family: OpenSans, sans-serif;
     font-size: 20px;
@@ -141,14 +124,18 @@ body {
     line-height: 40px;
 }
 
-.greeting__scene-scroll-bar {
+.presentation__scrollbar {
+    width: 150px;
     display: flex;
-    column-gap: 50px;
-    align-items: center ;
-    justify-self: center;
+    align-items: center;
+    justify-content: space-between;
+
+    position: absolute;
+    bottom: 50px;
+    left: calc(50% - calc(150px / 2));
 }
 
-.greeting__scene-index {
+.presentation__scrollbar-page {
     font-size: 36px;
     color: rgba(255, 255, 255, .4);
     font-weight: 700;
@@ -156,15 +143,23 @@ body {
     transition: all .5s;
 }
 
-.greeting__scene-index:hover {
+.presentation__scrollbar-page:hover {
     cursor: pointer;
 }
 
-.greeting__scene-index--active {
+.presentation__scrollbar-page--active {
     transform: scale(1);
     text-decoration-line: line-through;
     text-decoration-color: #4CAF50;
     text-decoration-thickness: 4px;
     font-weight: 700;
     color: #fff;
-} */
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+
+@media (max-width: 1180px) {
+    .header {
+        width: 100%;
+    }
+}
